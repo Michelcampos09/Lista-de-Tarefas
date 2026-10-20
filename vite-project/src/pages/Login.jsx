@@ -35,6 +35,7 @@ function Login({ aoLogar }) {
           }}
         />
       </div>
+      <button onClick={fazerLogin}>Fazer o login</button>
     </div>
   );
 }
