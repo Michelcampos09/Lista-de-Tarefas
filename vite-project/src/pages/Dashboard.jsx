@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ListaDeTarefas from "../components/ListaDeTarefas";
 import ItensLista from "../components/ItensLista";
+import Logo from "../components/Logo";
 
 function Dashboard({ aoSair }) {
   const [tarefas, setTarefas] = useState([]);
@@ -12,12 +13,15 @@ function Dashboard({ aoSair }) {
   return (
     <main className="pagina-dashboard">
       <header className="cabecalho-dashboard">
-        <div>
-          <p className="subtitulo-dashboard">ORGANIZAÇÃO PESSOAL</p>
-          <h1>Minhas tarefas</h1>
-          <p className="descricao-dashboard">
-            Organize suas atividades e acompanhe o que precisa fazer.
-          </p>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+          <Logo size={52} />
+          <div>
+            <p className="subtitulo-dashboard">ORGANIZAÇÃO PESSOAL</p>
+            <h1>Minhas tarefas</h1>
+            <p className="descricao-dashboard">
+              Organize suas atividades e acompanhe o que precisa fazer.
+            </p>
+          </div>
         </div>
         <button className="botao-sair" type="button" onClick={aoSair}>
           Sair
