@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-function ItensLista() {
-  const [tarefas, setTarefas] = useState;
+function ItensLista({ tarefas }) {
+  return (
+    <ul>
+      {tarefas.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
 }
 export default ItensLista;
