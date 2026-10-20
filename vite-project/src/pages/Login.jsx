@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Logo from "../components/Logo";
 
 function Login({ aoLogar }) {
   const [email, setEmail] = useState("");
@@ -16,9 +15,6 @@ function Login({ aoLogar }) {
     <main className="pagina-login">
       <section className="card" aria-labelledby="titulo-login">
         <header className="cabecalho-login">
-          <div style={{ marginBottom: "16px" }}>
-            <Logo size={48} />
-          </div>
           <h1 id="titulo-login">Login</h1>
           <p>Acesse sua lista de tarefas.</p>
         </header>
