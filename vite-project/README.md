@@ -2,7 +2,7 @@
 
 Projeto de um gerenciador de tarefas desenvolvido em **React** com **Vite**. O objetivo deste projeto é demonstrar a divisão de responsabilidades através de componentes, manipulação de estados (`useState`), passagem de propriedades (`props`) e renderização condicional simulando um fluxo completo de autenticação e painel de controle (Dashboard).
 
-🔗 **Acesse o projeto online:** [Clique aqui para testar na Vercel](COLE_SEU_LINK_DA_VERCEL_AQUI)
+🔗 **Acesse o projeto online:** [https://lista-de-tarefas-six.vercel.app/]
 
 ---
 
