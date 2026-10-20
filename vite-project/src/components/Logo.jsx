@@ -24,7 +24,6 @@ function Logo({ size = 40, className = "", showText = false }) {
         }}
       >
         <defs>
-          {/* Gradiente de Fundo */}
           <linearGradient
             id="logoBgGrad"
             x1="64"
@@ -38,7 +37,6 @@ function Logo({ size = 40, className = "", showText = false }) {
             <stop offset="100%" stopColor="#46633f" />
           </linearGradient>
 
-          {/* Destaque de Vidro Superior */}
           <linearGradient
             id="logoGlassGrad"
             x1="256"
@@ -51,7 +49,6 @@ function Logo({ size = 40, className = "", showText = false }) {
             <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
           </linearGradient>
 
-          {/* Sombra da Prancheta */}
           <filter
             id="logoCardShadow"
             x="60"
@@ -70,7 +67,6 @@ function Logo({ size = 40, className = "", showText = false }) {
             />
           </filter>
 
-          {/* Sombra do Selo Verde */}
           <filter
             id="logoBadgeShadow"
             x="280"
@@ -89,7 +85,6 @@ function Logo({ size = 40, className = "", showText = false }) {
             />
           </filter>
 
-          {/* Gradiente do Selo */}
           <linearGradient
             id="logoBadgeGrad"
             x1="325"
@@ -102,7 +97,6 @@ function Logo({ size = 40, className = "", showText = false }) {
             <stop offset="100%" stopColor="#a8693a" />
           </linearGradient>
 
-          {/* Gradiente do Grampo */}
           <linearGradient
             id="logoClipGrad"
             x1="196"
@@ -116,7 +110,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           </linearGradient>
         </defs>
 
-        {/* Fundo Squircle */}
         <rect
           x="32"
           y="32"
@@ -126,7 +119,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           fill="url(#logoBgGrad)"
         />
 
-        {/* Borda Sutil com Brilho */}
         <rect
           x="32"
           y="32"
@@ -138,18 +130,15 @@ function Logo({ size = 40, className = "", showText = false }) {
           fill="none"
         />
 
-        {/* Reflexo Superior Efeito Vidro */}
         <path
           d="M 32 140 C 32 80 80 32 140 32 L 372 32 C 432 32 480 80 480 140 C 480 185 380 220 256 220 C 132 220 32 185 32 140 Z"
           fill="url(#logoGlassGrad)"
           opacity="0.6"
         />
 
-        {/* Prancheta com Tarefas */}
         <g filter="url(#logoCardShadow)">
           <rect x="112" y="92" width="288" height="328" rx="32" fill="#FFFFFF" />
 
-          {/* Grampo da Prancheta */}
           <rect
             x="196"
             y="74"
@@ -160,7 +149,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           />
           <rect x="232" y="84" width="48" height="16" rx="8" fill="#E2E8F0" />
 
-          {/* Tarefa 1 Concluída */}
           <rect
             x="144"
             y="148"
@@ -178,7 +166,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           />
           <rect x="196" y="157" width="168" height="18" rx="9" fill="#1E293B" />
 
-          {/* Tarefa 2 Concluída */}
           <rect
             x="144"
             y="212"
@@ -196,7 +183,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           />
           <rect x="196" y="221" width="132" height="18" rx="9" fill="#475569" />
 
-          {/* Tarefa 3 Pendente */}
           <rect
             x="144"
             y="276"
@@ -209,7 +195,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           />
           <rect x="196" y="285" width="150" height="18" rx="9" fill="#94A3B8" />
 
-          {/* Linha 4 Prévia */}
           <rect
             x="144"
             y="340"
@@ -223,7 +208,6 @@ function Logo({ size = 40, className = "", showText = false }) {
           <rect x="196" y="349" width="96" height="18" rx="9" fill="#CBD5E1" />
         </g>
 
-        {/* Selo Flutuante de Sucesso / Conclusão */}
         <g filter="url(#logoBadgeShadow)">
           <circle
             cx="372"
