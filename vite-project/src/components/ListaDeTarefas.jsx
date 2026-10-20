@@ -1,32 +1,33 @@
 import { useState } from "react";
-import ItensLista from "./ItensLista";
-function ListaDeTarefas() {
+
+function ListaDeTarefas({ onAdicionar }) {
   const [tarefa, setTarefa] = useState("");
-  const [tarefas, setTarefas] = useState([]);
-  const enviarTarefa = () => {
+
+  function enviarTarefa(event) {
+    event.preventDefault();
     if (!tarefa.trim()) return;
-    setTarefas([...tarefas, tarefa]);
+
+    onAdicionar(tarefa.trim());
     setTarefa("");
-  };
-  const enterKey = (e) => {
-    if (e.key == "Enter") {
-      enviarTarefa();
-    }
-  };
+  }
+
   return (
-    <div>
+    <form className="formulario-tarefa" onSubmit={enviarTarefa}>
+      <label htmlFor="nova-tarefa">Nome da tarefa</label>
       <input
+        id="nova-tarefa"
         type="text"
-        placeholder="Digite aqui uma tarefa:"
+        placeholder="Ex.: Estudar para a prova"
         value={tarefa}
-        onKeyDown={enterKey}
-        onChange={(e) => {
-          setTarefa(e.target.value);
+        onChange={(event) => {
+          setTarefa(event.target.value);
         }}
       />
-      <button onClick={enviarTarefa}>Enviar tarefa</button>
-      <ItensLista tarefas={tarefas} />
-    </div>
+      <button className="botao-adicionar" type="submit">
+        Adicionar tarefa
+      </button>
+    </form>
   );
 }
+
 export default ListaDeTarefas;
