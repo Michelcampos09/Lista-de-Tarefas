@@ -33,9 +33,9 @@ function Logo({ size = 40, className = "", showText = false }) {
             y2="480"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="45%" stopColor="#2563EB" />
-            <stop offset="100%" stopColor="#1D4ED8" />
+            <stop offset="0%" stopColor="#7f9d72" />
+            <stop offset="45%" stopColor="#5b7b52" />
+            <stop offset="100%" stopColor="#46633f" />
           </linearGradient>
 
           {/* Destaque de Vidro Superior */}
@@ -98,8 +98,8 @@ function Logo({ size = 40, className = "", showText = false }) {
             y2="420"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0%" stopColor="#10B981" />
-            <stop offset="100%" stopColor="#059669" />
+            <stop offset="0%" stopColor="#c98a4b" />
+            <stop offset="100%" stopColor="#a8693a" />
           </linearGradient>
 
           {/* Gradiente do Grampo */}
@@ -122,7 +122,7 @@ function Logo({ size = 40, className = "", showText = false }) {
           y="32"
           width="448"
           height="448"
-          rx="108"
+          rx="40"
           fill="url(#logoBgGrad)"
         />
 
@@ -132,7 +132,7 @@ function Logo({ size = 40, className = "", showText = false }) {
           y="32"
           width="448"
           height="448"
-          rx="108"
+          rx="40"
           stroke="url(#logoGlassGrad)"
           strokeWidth="4"
           fill="none"
@@ -167,11 +167,11 @@ function Logo({ size = 40, className = "", showText = false }) {
             width="36"
             height="36"
             rx="10"
-            fill="#EEF2FF"
+            fill="#e6ecdd"
           />
           <path
             d="M 153 166 L 160 173 L 171 159"
-            stroke="#2563EB"
+            stroke="#5b7b52"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -185,11 +185,11 @@ function Logo({ size = 40, className = "", showText = false }) {
             width="36"
             height="36"
             rx="10"
-            fill="#EEF2FF"
+            fill="#e6ecdd"
           />
           <path
             d="M 153 230 L 160 237 L 171 223"
-            stroke="#2563EB"
+            stroke="#5b7b52"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -248,7 +248,7 @@ function Logo({ size = 40, className = "", showText = false }) {
           style={{
             fontSize: "1.25rem",
             fontWeight: "700",
-            color: "#172554",
+            color: "#2f3e2c",
             letterSpacing: "-0.02em",
           }}
         >

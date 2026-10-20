@@ -1,3 +1,19 @@
+:root {
+  --verde-900: #2f3e2c;
+  --verde-700: #4a6741;
+  --verde-600: #5b7b52;
+  --verde-500: #6f8f65;
+  --verde-200: #d3ddc9;
+  --verde-100: #e6ecdd;
+  --papel: #f4f1e8;
+  --cartao: #fbfaf5;
+  --borda: #d9d5c6;
+  --texto: #34382f;
+  --texto-suave: #6c705f;
+  --terracota: #a8553f;
+  --raio: 3px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,14 +22,19 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  color: #1f2937;
-  background-color: #f1f5f9;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background-color: var(--papel);
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
 button,
 input {
   font: inherit;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .pagina-login {
@@ -27,10 +48,10 @@ input {
 .card {
   width: min(100%, 420px);
   padding: clamp(24px, 6vw, 40px);
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 8px 24px rgb(15 23 42 / 6%);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--cartao);
+  box-shadow: 0 2px 0 var(--borda);
 }
 
 .cabecalho-login {
@@ -39,14 +60,14 @@ input {
 
 .cabecalho-login h1 {
   margin: 0 0 8px;
-  color: #172554;
-  font-size: 1.75rem;
+  color: var(--verde-900);
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
 .cabecalho-login p {
   margin: 0;
-  color: #64748b;
+  color: var(--texto-suave);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -63,53 +84,63 @@ input {
 }
 
 .email label,
-.senha label {
-  color: #334155;
+.senha label,
+.formulario-tarefa label {
+  color: var(--texto);
   font-size: 0.9rem;
   font-weight: 600;
 }
 
 .email input,
-.senha input {
+.senha input,
+.formulario-tarefa input {
   width: 100%;
   min-height: 46px;
   padding: 10px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  color: #1f2937;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  color: var(--texto);
   background-color: #fff;
 }
 
 .email input::placeholder,
-.senha input::placeholder {
-  color: #94a3b8;
+.senha input::placeholder,
+.formulario-tarefa input::placeholder {
+  color: #a3a692;
 }
 
 .email input:focus-visible,
-.senha input:focus-visible {
-  border-color: #2563eb;
-  outline: 3px solid rgb(37 99 235 / 18%);
+.senha input:focus-visible,
+.formulario-tarefa input:focus-visible {
+  border-color: var(--verde-600);
+  outline: 3px solid rgb(91 123 82 / 22%);
 }
 
-.botao-login {
+.botao-login,
+.botao-adicionar {
   min-height: 46px;
   margin-top: 4px;
   padding: 10px 16px;
   border: 0;
-  border-radius: 6px;
+  border-radius: var(--raio);
   color: #fff;
-  background-color: #2563eb;
+  background-color: var(--verde-600);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 150ms ease;
 }
 
-.botao-login:hover {
-  background-color: #1d4ed8;
+.botao-login:hover,
+.botao-adicionar:hover {
+  background-color: var(--verde-700);
 }
 
-.botao-login:focus-visible {
-  outline: 3px solid rgb(37 99 235 / 35%);
+.botao-login:focus-visible,
+.botao-sair:focus-visible,
+.botao-adicionar:focus-visible,
+.botao-checar:focus-visible,
+.botao-remover:focus-visible {
+  outline: 3px solid rgb(91 123 82 / 40%);
   outline-offset: 3px;
 }
 
@@ -127,49 +158,45 @@ input {
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--borda);
 }
 
 .subtitulo-dashboard {
-  margin: 0 0 10px;
-  color: #2563eb;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  margin: 0 0 6px;
+  color: var(--verde-600);
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 .cabecalho-dashboard h1 {
   margin: 0;
-  color: #172554;
+  color: var(--verde-900);
   font-size: clamp(1.8rem, 5vw, 2.4rem);
   line-height: 1.2;
 }
 
 .descricao-dashboard {
+  max-width: 520px;
   margin: 10px 0 0;
-  color: #64748b;
+  color: var(--texto-suave);
   line-height: 1.5;
 }
 
 .botao-sair {
   min-height: 42px;
   padding: 8px 16px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  color: #334155;
-  background-color: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  color: var(--texto);
+  background-color: var(--cartao);
   font-weight: 600;
   cursor: pointer;
 }
 
 .botao-sair:hover {
-  border-color: #94a3b8;
-  background-color: #f8fafc;
-}
-
-.botao-sair:focus-visible,
-.botao-adicionar:focus-visible {
-  outline: 3px solid rgb(37 99 235 / 30%);
-  outline-offset: 3px;
+  border-color: var(--verde-500);
+  background-color: var(--verde-100);
 }
 
 .conteudo-dashboard {
@@ -182,22 +209,22 @@ input {
 .card-tarefas {
   min-width: 0;
   padding: clamp(20px, 4vw, 30px);
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: var(--cartao);
+  box-shadow: 0 2px 0 var(--borda);
 }
 
 .card-tarefas h2 {
   margin: 0;
-  color: #172554;
-  font-size: 1.2rem;
+  color: var(--verde-900);
+  font-size: 1.25rem;
 }
 
 .card-adicionar > p,
 .cabecalho-lista p {
   margin: 8px 0 0;
-  color: #64748b;
+  color: var(--texto-suave);
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -208,54 +235,13 @@ input {
   margin-top: 24px;
 }
 
-.formulario-tarefa label {
-  color: #334155;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.formulario-tarefa input {
-  width: 100%;
-  min-height: 46px;
-  padding: 10px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  color: #1f2937;
-  background-color: #fff;
-}
-
-.formulario-tarefa input::placeholder {
-  color: #94a3b8;
-}
-
-.formulario-tarefa input:focus-visible {
-  border-color: #2563eb;
-  outline: 3px solid rgb(37 99 235 / 18%);
-}
-
-.botao-adicionar {
-  min-height: 46px;
-  margin-top: 4px;
-  padding: 10px 16px;
-  border: 0;
-  border-radius: 6px;
-  color: #fff;
-  background-color: #2563eb;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.botao-adicionar:hover {
-  background-color: #1d4ed8;
-}
-
 .cabecalho-lista {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 18px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--borda);
 }
 
 .contador-tarefas {
@@ -264,9 +250,9 @@ input {
   height: 36px;
   padding: 0 8px;
   place-items: center;
-  border-radius: 18px;
-  color: #1d4ed8;
-  background-color: #eff6ff;
+  border-radius: var(--raio);
+  color: var(--verde-700);
+  background-color: var(--verde-100);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -274,27 +260,81 @@ input {
 .lista-vazia {
   margin: 0;
   padding: 24px 0 8px;
-  color: #64748b;
+  color: var(--texto-suave);
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .itens-tarefas {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
   padding: 18px 0 0;
   list-style: none;
 }
 
-.itens-tarefas li {
-  padding: 13px 14px;
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background-color: #fff;
+}
+
+.texto-tarefa {
+  flex: 1;
+  min-width: 0;
   overflow-wrap: anywhere;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  color: #334155;
-  background-color: #f8fafc;
   line-height: 1.45;
+}
+
+.item.feita {
+  background-color: var(--verde-100);
+}
+
+.item.feita .texto-tarefa {
+  color: var(--texto-suave);
+  text-decoration: line-through;
+}
+
+.botao-checar {
+  display: grid;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  place-items: center;
+  border: 2px solid var(--verde-500);
+  border-radius: var(--raio);
+  color: #fff;
+  background-color: transparent;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.botao-checar:hover {
+  background-color: var(--verde-200);
+}
+
+.item.feita .botao-checar {
+  background-color: var(--verde-600);
+}
+
+.botao-remover {
+  padding: 4px 8px;
+  border: 0;
+  color: var(--terracota);
+  background: none;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.botao-remover:hover {
+  color: #7d3a28;
 }
 
 @media (max-width: 400px) {

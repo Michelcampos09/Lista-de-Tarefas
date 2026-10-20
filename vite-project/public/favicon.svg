@@ -2,9 +2,9 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3B82F6"/>
-      <stop offset="45%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#1D4ED8"/>
+      <stop offset="0%" stop-color="#7f9d72"/>
+      <stop offset="45%" stop-color="#5b7b52"/>
+      <stop offset="100%" stop-color="#46633f"/>
     </linearGradient>
 
     <!-- Glass Specular Highlight -->
@@ -25,8 +25,8 @@
 
     <!-- Badge Gradient (Emerald to Cyan-Green) -->
     <linearGradient id="badgeGrad" x1="325" y1="325" x2="420" y2="420" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#059669"/>
+      <stop offset="0%" stop-color="#c98a4b"/>
+      <stop offset="100%" stop-color="#a8693a"/>
     </linearGradient>
 
     <!-- Clip Top Gradient -->
@@ -37,10 +37,10 @@
   </defs>
 
   <!-- Background Squircle -->
-  <rect x="32" y="32" width="448" height="448" rx="108" fill="url(#bgGrad)"/>
+  <rect x="32" y="32" width="448" height="448" rx="40" fill="url(#bgGrad)"/>
   
   <!-- Subtle Border Glow -->
-  <rect x="32" y="32" width="448" height="448" rx="108" stroke="url(#glassGrad)" stroke-width="4" fill="none"/>
+  <rect x="32" y="32" width="448" height="448" rx="40" stroke="url(#glassGrad)" stroke-width="4" fill="none"/>
 
   <!-- Top Glass Highlight Overlay -->
   <path d="M 32 140 C 32 80 80 32 140 32 L 372 32 C 432 32 480 80 480 140 C 480 185 380 220 256 220 C 132 220 32 185 32 140 Z" fill="url(#glassGrad)" opacity="0.6"/>
@@ -54,13 +54,13 @@
     <rect x="232" y="84" width="48" height="16" rx="8" fill="#E2E8F0"/>
 
     <!-- Item 1: Checked -->
-    <rect x="144" y="148" width="36" height="36" rx="10" fill="#EEF2FF"/>
-    <path d="M 153 166 L 160 173 L 171 159" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="144" y="148" width="36" height="36" rx="10" fill="#e6ecdd"/>
+    <path d="M 153 166 L 160 173 L 171 159" stroke="#5b7b52" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="196" y="157" width="168" height="18" rx="9" fill="#1E293B"/>
 
     <!-- Item 2: Checked -->
-    <rect x="144" y="212" width="36" height="36" rx="10" fill="#EEF2FF"/>
-    <path d="M 153 230 L 160 237 L 171 223" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="144" y="212" width="36" height="36" rx="10" fill="#e6ecdd"/>
+    <path d="M 153 230 L 160 237 L 171 223" stroke="#5b7b52" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="196" y="221" width="132" height="18" rx="9" fill="#475569"/>
 
     <!-- Item 3: In-Progress / Blank Box -->
